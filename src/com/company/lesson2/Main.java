@@ -4,13 +4,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //doChangeValueArray1to0and0to1();
-        //doCreateArray_0_to_21_with_step_3();
-        //doMultiply2();
-        //fillDiagonal();
+//        doChangeValueArray1to0and0to1();
+//        doCreateArray_0_to_21_with_step_3();
+//         doMultiply2();
+//        fillDiagonal();
+//        findInArrayMinMax();
+
+          }
 
 
-    }
+
+
+
+
 
 
 
@@ -66,6 +72,22 @@ public class Main {
                 System.out.println();
             }
         }
+
+    public static void findInArrayMinMax() {
+        int[] array = new int[]{1, 2, 3, 750, 12, -4578, 15};
+        int max,min;
+        max=min=array[0];
+        for (int i = 0; i < array.length; i++) {
+
+            if(array[i]>max){
+                max=array[i];
+            }
+            if (array[i]<min){
+                min=array[i];
+            }
+        }
+        System.out.println(" min = "+min+ "\n max = "+ max);
+    }
 
 }
 
