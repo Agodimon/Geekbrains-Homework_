@@ -9,17 +9,15 @@ public class Main {
        //doMultiply2();
 
        int[][] arr= new int[4][4];
-
+        int n=2;
 for (int i = 0; i< arr.length; i++){
     for (int j = 0; j< arr.length; j++){
-        if (i==j){
-
+        if ((i==j)||(j==n-i+1)){
             System.out.println(" 11");
         }else{
             System.out.println(" "+i+j);
         }
     }
-
     System.out.println();
 }
 }
