@@ -4,25 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-       //doChangeValueArray1to0and0to1();
-       //doCreateArray_0_to_21_with_step_3();
-       //doMultiply2();
+        //doChangeValueArray1to0and0to1();
+        //doCreateArray_0_to_21_with_step_3();
+        //doMultiply2();
+        //fillDiagonal();
 
-       int[][] arr= new int[4][4];
-        int n=2;
-for (int i = 0; i< arr.length; i++){
-    for (int j = 0; j< arr.length; j++){
-        if ((i==j)||(j==n-i+1)){
-            System.out.println(" 11");
-        }else{
-            System.out.println(" "+i+j);
-        }
+
     }
-    System.out.println();
-}
-}
-
-
 
 
 
@@ -63,6 +51,22 @@ for (int i = 0; i< arr.length; i++){
         }
         System.out.println(" \n \n ");
     }
+
+    public static void fillDiagonal() {
+            int[][] arr= new int[4][4];
+            int n=2;
+            for (int i = 0; i< arr.length; i++){
+                for (int j = 0; j< arr.length; j++){
+                    if ((i==j)||(j==n-i+1)){
+                        System.out.println(" 11");
+                    }else{
+                        System.out.println(" "+i+j);
+                    }
+                }
+                System.out.println();
+            }
+        }
+
 }
 
 
