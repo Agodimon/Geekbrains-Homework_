@@ -4,5 +4,63 @@ public class Main {
 
     public static void main(String[] args) {
 
+       doChangeValueArray1to0and0to1();
+       doCreateArray_0_to_21_with_step_3();
+       doMultiply2();
+
+
+}
+
+
+
+
+
+    public static void doChangeValueArray1to0and0to1() {
+        int[] doChangeArray = {1, 0, 1, 1, 0, 1, 1, 0};
+        for (int i = 0; i < doChangeArray.length; i++) {
+            if (doChangeArray[i] == 0) {
+                doChangeArray[i] = 1;
+            } else {
+                doChangeArray[i] = 0;
+            }
+            System.out.println(doChangeArray[i]);
+        }
+        System.out.println("\n \n");
+    }
+
+    public static void doCreateArray_0_to_21_with_step_3() {
+        int[] array_= new int[8];
+        array_[0]=0;
+        System.out.println(array_[0]);
+        for (int i = 1; i < array_.length; i = i + 1){
+            array_[i]=array_[i-1]+3;
+            System.out.println(array_[i]);
+    }
+        System.out.println("\n \n");
+}
+
+    public static void doMultiply2() {
+        int[] array={1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i=0; i<array.length; i++){
+             if (array[i]<6){
+                System.out.println(array[i]*2);
+
+            }else{
+                System.out.println(" ");
+            }
+
+        }
+        System.out.println(" \n \n ");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
