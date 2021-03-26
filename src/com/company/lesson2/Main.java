@@ -6,30 +6,35 @@ public class Main {
       // doChangeValueArray1to0and0to1();
         //doCreateArray_0_to_21_with_step_3();
         //doMultiply2();
-        fillDiagonal();
+        //fillDiagonal();
         //findInArrayMinMax();
 
-       // int[] arr=new int[]{6,2,3,0,5,6};
-       // checkBalance(arr);
+       int[] arr=new int[]{6,2,3,0,5,15};
+       checkBalance(arr);
 
 
     }
 
     public static boolean checkBalance(int[] arrays ) {
-        int ss=arrays[0], sum=arrays[0];
-        int num1, num2, num3, num4, num5, num6;
-                for (int i=0; i< arrays.length; i++){
 
-                    if (i != 0) {
-                     sum=sum+arrays[i];
-                    }
-                    System.out.println(sum);
-                    if (i==0){
-                        System.out.println("");
-                    }
-                    System.out.println(sum);
-                }
-                return true;
+        int num1, num2, num3, num4, num5, num6;
+        int sumDoNull = 0;
+        int sumAfterNull = 0;
+        int counter=0;
+        for (int i = 0; i < arrays.length; i++) {
+            if (arrays[i] != 0) {
+                sumDoNull = sumDoNull + arrays[i];
+                counter++;
+            } else {
+                break;
+            }
+
+
+        }
+        System.out.println("counter = "+(counter-1));
+
+        System.out.println(sumDoNull + " = " + sumAfterNull);
+        return true;
     }
 
     public static void doChangeValueArray1to0and0to1() {
@@ -77,8 +82,6 @@ public class Main {
                     }else{
                         System.out.print(" "+arr[i][j]);
                     }
-
-
                 }
                 System.out.println("");
             }
@@ -97,7 +100,6 @@ public class Main {
             }
         System.out.println(" min = "+min+ "\n max = "+ max);
     }
-
 }
 
 
