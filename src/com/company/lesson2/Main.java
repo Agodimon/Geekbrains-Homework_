@@ -3,11 +3,33 @@ package com.company.lesson2;
 public class Main {
 
     public static void main(String[] args) {
-        doChangeValueArray1to0and0to1();
-        doCreateArray_0_to_21_with_step_3();
-        doMultiply2();
+      // doChangeValueArray1to0and0to1();
+        //doCreateArray_0_to_21_with_step_3();
+        //doMultiply2();
         fillDiagonal();
-        findInArrayMinMax();
+        //findInArrayMinMax();
+
+       // int[] arr=new int[]{6,2,3,0,5,6};
+       // checkBalance(arr);
+
+
+    }
+
+    public static boolean checkBalance(int[] arrays ) {
+        int ss=arrays[0], sum=arrays[0];
+        int num1, num2, num3, num4, num5, num6;
+                for (int i=0; i< arrays.length; i++){
+
+                    if (i != 0) {
+                     sum=sum+arrays[i];
+                    }
+                    System.out.println(sum);
+                    if (i==0){
+                        System.out.println("");
+                    }
+                    System.out.println(sum);
+                }
+                return true;
     }
 
     public static void doChangeValueArray1to0and0to1() {
@@ -46,17 +68,19 @@ public class Main {
         System.out.println(" \n \n ");
     }
     public static void fillDiagonal() {
-            int[][] arr= new int[4][4];
-            int n=2;
+            int[][] arr= new int[11][11];
             for (int i = 0; i< arr.length; i++){
                 for (int j = 0; j< arr.length; j++){
-                    if ((i==j)||(j==n-i+1)){
-                        System.out.println(" 11");
+                     if (i==j||j==arr[i].length-i-1){
+                       arr[i][j]=1;
+                        System.out.print(" "+arr[i][j]);
                     }else{
-                        System.out.println(" "+i+j);
+                        System.out.print(" "+arr[i][j]);
                     }
+
+
                 }
-                System.out.println();
+                System.out.println("");
             }
     }
     public static void findInArrayMinMax() {
