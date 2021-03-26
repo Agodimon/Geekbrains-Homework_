@@ -1,22 +1,15 @@
 package com.company.lesson2;
-
 public class Main {
-
     public static void main(String[] args) {
-      // doChangeValueArray1to0and0to1();
-        //doCreateArray_0_to_21_with_step_3();
-        //doMultiply2();
-        //fillDiagonal();
-        //findInArrayMinMax();
-
-       int[] arr=new int[]{6,2,3,0,5,15};
-       checkBalance(arr);
-
-
+      doChangeValueArray1to0and0to1();
+      doCreateArray_0_to_21_with_step_3();
+      doMultiply2();
+      fillDiagonal();
+      findInArrayMinMax();
+      int[] arr=new int[]{2,14,16,0,17,15};
+      System.out.println(checkBalance(arr));
     }
-
     public static boolean checkBalance(int[] arrays ) {
-
         int num1, num2, num3, num4, num5, num6;
         int sumDoNull = 0;
         int sumAfterNull = 0;
@@ -28,15 +21,21 @@ public class Main {
             } else {
                 break;
             }
-
-
         }
-        System.out.println("counter = "+(counter-1));
-
+        for (int i=counter+1;i<arrays.length;i++){
+          if(arrays[i]!=0){
+           sumAfterNull=sumAfterNull+arrays[i];
+          } else {
+              break;
+          }
+        }
         System.out.println(sumDoNull + " = " + sumAfterNull);
-        return true;
+        if (sumDoNull==sumAfterNull){
+            return true;
+        }else{
+            return false;
+        }
     }
-
     public static void doChangeValueArray1to0and0to1() {
         int[] doChangeArray = {1, 0, 1, 1, 0, 1, 1, 0};
         for (int i = 0; i < doChangeArray.length; i++) {
@@ -49,7 +48,6 @@ public class Main {
         }
             System.out.println("\n \n");
     }
-
     public static void doCreateArray_0_to_21_with_step_3() {
         int[] array_= new int[8];
         array_[0]=0;
@@ -60,7 +58,6 @@ public class Main {
             }
                 System.out.println("\n \n");
     }
-
     public static void doMultiply2() {
         int[] array={1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         for (int i=0; i<array.length; i++){
