@@ -10,13 +10,12 @@ public class Main {
       System.out.println(checkBalance(arr));
     }
     public static boolean checkBalance(int[] arrays ) {
-        int num1, num2, num3, num4, num5, num6;
         int sumDoNull = 0;
         int sumAfterNull = 0;
         int counter=0;
-        for (int i = 0; i < arrays.length; i++) {
-            if (arrays[i] != 0) {
-                sumDoNull = sumDoNull + arrays[i];
+        for (int array : arrays) {
+            if (array != 0) {
+                sumDoNull = sumDoNull + array;
                 counter++;
             } else {
                 break;
@@ -30,11 +29,7 @@ public class Main {
           }
         }
         System.out.println(sumDoNull + " = " + sumAfterNull);
-        if (sumDoNull==sumAfterNull){
-            return true;
-        }else{
-            return false;
-        }
+        return sumDoNull == sumAfterNull;
     }
     public static void doChangeValueArray1to0and0to1() {
         int[] doChangeArray = {1, 0, 1, 1, 0, 1, 1, 0};
@@ -60,10 +55,10 @@ public class Main {
     }
     public static void doMultiply2() {
         int[] array={1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-        for (int i=0; i<array.length; i++){
-             if (array[i]<6){
-                System.out.println(array[i]*2);
-            }else{
+        for (int j : array) {
+            if (j < 6) {
+                System.out.println(j * 2);
+            } else {
                 System.out.println(" ");
             }
         }
@@ -75,26 +70,24 @@ public class Main {
                 for (int j = 0; j< arr.length; j++){
                      if (i==j||j==arr[i].length-i-1){
                        arr[i][j]=1;
-                        System.out.print(" "+arr[i][j]);
-                    }else{
-                        System.out.print(" "+arr[i][j]);
-                    }
+                     }
+                    System.out.print(" "+arr[i][j]);
                 }
-                System.out.println("");
+                System.out.println();
             }
     }
     public static void findInArrayMinMax() {
         int[] array = new int[]{1, 2, 3, 750, 12, -4578, 15};
         int max,min;
         max=min=array[0];
-            for (int i = 0; i < array.length; i++) {
-                if (array[i] > max) {
-                max = array[i];
-                }
-                if (array[i] < min) {
-                min = array[i];
-                }
+        for (int j : array) {
+            if (j > max) {
+                max = j;
             }
+            if (j < min) {
+                min = j;
+            }
+        }
         System.out.println(" min = "+min+ "\n max = "+ max);
     }
 }
