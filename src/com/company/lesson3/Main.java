@@ -4,13 +4,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    public static int x=0;
+    public static int min_enter =0;
+    public static int max_enter =9;
 
 
 
     public static void main(String[] args) {
         enterNumber_();
-        printOutRandomNumberInt_0_to_9();
+        printOutRandomNumberInt_min_to_max();
     }
 
     public static int enterNumber_() {
@@ -21,14 +22,14 @@ public class Main {
             enterNum=enterNumber.nextInt();
             System.out.println(enterNum);
 
-        }while (enterNum<0 || enterNum>9 );
+        }while (enterNum< min_enter || enterNum> max_enter);
         System.out.println("Введёное число : "+enterNum+" принято.");
         return enterNum;
     }
 
-    public static int printOutRandomNumberInt_0_to_9() {
-     Random randomNum_0to9=new Random();
-     int randomNum=randomNum_0to9.nextInt(10);
+    public static int printOutRandomNumberInt_min_to_max() {
+     Random randomNum_minMax=new Random();
+     int randomNum=randomNum_minMax.nextInt(10);
         System.out.println(" \n Случайное число от 0 до 9: "+randomNum);
         return randomNum;
     }
