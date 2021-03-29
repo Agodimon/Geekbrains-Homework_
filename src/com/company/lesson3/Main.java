@@ -48,12 +48,9 @@ public class Main {
         return enterNum;
 
     }
-
     public static int printOutRandomNumberInt_min_to_max() {
      Random randomNum_minMax=new Random();
         return randomNum_minMax.nextInt(10);
     }
-
-
 }
 
