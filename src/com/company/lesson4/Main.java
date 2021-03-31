@@ -8,7 +8,7 @@ public class Main {
     public static char[][] map;
     public static final int SIZE=3;
 
-    public static final int DITS_TO_WIN=3;
+    public static final int DOTS_TO_WIN =3;
 
     public static final char DOT_EMPTY='*';
     public static final char DOT_X='X';
@@ -101,15 +101,30 @@ public class Main {
     }
 
     public static boolean checkWin0(char symbol) {
-        if(map[0][0] == symbol && map[0][1] == symbol && map[0][2] == symbol) return true;
-        if(map[1][0] == symbol && map[1][1] == symbol && map[1][2] == symbol) return true;
-        if(map[2][0] == symbol && map[2][1] == symbol && map[2][2] == symbol) return true;
-        if(map[0][0] == symbol && map[1][0] == symbol && map[2][0] == symbol) return true;
-        if(map[0][1] == symbol && map[1][1] == symbol && map[2][1] == symbol) return true;
-        if(map[0][2] == symbol && map[1][2] == symbol && map[2][2] == symbol) return true;
-        if(map[0][0] == symbol && map[1][1] == symbol && map[2][2] == symbol) return true;
-        if(map[2][0] == symbol && map[1][1] == symbol && map[0][2] == symbol) return true;
-        return false;
+        int mainDiagonalDot,sideDiagonalDot,horizontalDot, verticalDot;
+        for (int i = 0; i < SIZE; i++) {
+            horizontalDot=0;
+            verticalDot=0;
+            for (int j = 0; j < SIZE; j++) {
+              if(map[i][j]==symbol){
+                  horizontalDot++;
+              }
+              if (map[j][i]==symbol){
+                      verticalDot++;
+              }
+            }
+            if (horizontalDot==DOTS_TO_WIN||verticalDot==DOTS_TO_WIN) return true;
+        }
+            mainDiagonalDot=0;
+            sideDiagonalDot=0;
+        for (int i = 0; i < SIZE; i++) {
+            if (map[i][i]==symbol){
+             mainDiagonalDot++;
+            }
+            if (map[i][SIZE-i-1]==symbol){
+             sideDiagonalDot++;
+            }
+        }
+        return mainDiagonalDot == DOTS_TO_WIN || sideDiagonalDot == DOTS_TO_WIN;
     }
-
 }
