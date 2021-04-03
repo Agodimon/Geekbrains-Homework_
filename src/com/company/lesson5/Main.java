@@ -6,13 +6,16 @@ public class Main {
     public static void main(String[] args) {
         Staff[] staff = getStaff();
         selectEmployeesUpTo40(staff);
+
     }
 
     private static void selectEmployeesUpTo40(Staff[] staff) {
-        for (int i = 0; i < staff.length; i++) {
+        int i = 0;
+        while (i < staff.length) {
           if(staff[i].getAge()>40){
              staff[i].getInfo();
             }
+            i++;
         }
     }
 

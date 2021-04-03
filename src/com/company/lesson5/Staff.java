@@ -9,13 +9,13 @@ public class Staff {
     private int     age;
 
     public Staff(String  name, String  position,String email, String telephoneNum, int age) {
-        this.name=name;
-        this.position=position;
-        this.email=email;
-        this.telephoneNum=telephoneNum;
-
+        setName(name);
+        setPosition(position);
+        setEmail(email);
+        setTelephoneNum(telephoneNum);
         setAge(age);
     }
+
     public Staff(){
        this.name="Nameless";
         this.position="Unknown position";
@@ -84,12 +84,8 @@ public class Staff {
         return name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
-    }
-
-    private String getPosition() {
-        return position;
     }
 
     private void setPosition(String position) {
@@ -101,7 +97,7 @@ public class Staff {
         return email;
     }
 
-    public void setEmail(String email) {
+    private void setEmail(String email) {
         this.email = email;
     }
 
@@ -109,11 +105,11 @@ public class Staff {
         return telephoneNum;
     }
 
-    public void setTelephoneNum(String telephoneNum) {
+    private void setTelephoneNum(String telephoneNum) {
         this.telephoneNum = telephoneNum;
     }
 
-    public void setSalary(int salary) {
+    private void setSalary(int salary) {
         this.salary = salary;
     }
 
@@ -127,14 +123,10 @@ public class Staff {
         return age;
     }
 
-    public void setAge(int age) {
+    private void setAge(int age) {
 
-        if (age>=0 ){
-            this.age = age;
-        }else{
-          this.age=0;
-        }
+        this.age = Math.max(age, 0);
 
-        }
+    }
     }
 
