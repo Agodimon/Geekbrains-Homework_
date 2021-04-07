@@ -1,6 +1,6 @@
 package com.company.lesson5;
 
-public class Staff {
+public class Staffs {
     private String  name;
     private String  position;
     private String  email;
@@ -8,7 +8,7 @@ public class Staff {
     private int     salary;
     private int     age;
 
-    public Staff(String  name, String  position,String email, String telephoneNum, int age) {
+    public Staffs(String  name, String  position, String email, String telephoneNum, int age) {
         setName(name);
         setPosition(position);
         setEmail(email);
@@ -16,14 +16,12 @@ public class Staff {
         setAge(age);
     }
 
-    public Staff(){
+    public Staffs(){
        this.name="Nameless";
         this.position="Unknown position";
         this.email="Unknown email";
         this.telephoneNum="Unknown telephone ";
         this.age=0;
-
-
     }
 
     public void getInfo() {

@@ -4,12 +4,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    public static int min_enter =0;
-    public static int max_enter =9;
+    public static int minEnter =0;
+    public static int maxEnter =9;
     public static void main(String[] args) {
         Scanner scanner= new Scanner(System.in);
         do {
-            int randNum=printOutRandomNumberInt_min_to_max();
+            int randNum= printOutRandomNumberIntMinToMax();
             int attempt=3;
         do {
             int enterNum=enterNumber_();
@@ -42,13 +42,13 @@ public class Main {
             System.out.println(enterNum);
 
 
-        }while (enterNum< min_enter || enterNum> max_enter);
+        }while (enterNum< minEnter || enterNum> maxEnter);
         System.out.println("Введёное число : "+enterNum+" принято.");
 
         return enterNum;
 
     }
-    public static int printOutRandomNumberInt_min_to_max() {
+    public static int printOutRandomNumberIntMinToMax() {
      Random randomNum_minMax=new Random();
         return randomNum_minMax.nextInt(10);
     }

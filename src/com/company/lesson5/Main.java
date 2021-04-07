@@ -4,29 +4,27 @@ package com.company.lesson5;
 
 public class Main {
     public static void main(String[] args) {
-        Staff[] staff = getStaff();
-        selectEmployeesUpTo40(staff);
+        Staffs[] staffs = getStaff();
+        selectEmployeesUpTo40(staffs);
 
     }
 
-    private static void selectEmployeesUpTo40(Staff[] staff) {
-        int i = 0;
-        while (i < staff.length) {
-          if(staff[i].getAge()>40){
-             staff[i].getInfo();
+    private static void selectEmployeesUpTo40(Staffs[] staffs) {
+        for (Staffs value : staffs) {
+            if (value.getAge() > 40) {
+                value.getInfo();
             }
-            i++;
         }
     }
 
-    private static Staff[] getStaff() {
-        Staff[] staff=new Staff[5];
-        staff[0]=new Staff("Jobs P.K.","engineer","Jobs@mail.ru","89825486232",20);
-        staff[1]=new Staff("Volkov P.F.","engineer","Volkov@mail.ru","89822562323",50);
-        staff[2]=new Staff("Popov A.A.","Developer","Popov@mail.ru","89227772524",35);
-        staff[3]=new Staff("Romanov S.G.","Manager","Romanov@mail.ru","89025448254",75);
-        staff[4]=new Staff("Tyson M.","Planner","Tyson@mail.ru","89126582341",85);
-        return staff;
+    private static Staffs[] getStaff() {
+        Staffs[] staffs =new Staffs[5];
+        staffs[0]=new Staffs("Jobs P.K.","engineer","Jobs@mail.ru","89825486232",20);
+        staffs[1]=new Staffs("Volkov P.F.","engineer","Volkov@mail.ru","89822562323",50);
+        staffs[2]=new Staffs("Popov A.A.","Developer","Popov@mail.ru","89227772524",35);
+        staffs[3]=new Staffs("Romanov S.G.","Manager","Romanov@mail.ru","89025448254",75);
+        staffs[4]=new Staffs("Tyson M.","Planner","Tyson@mail.ru","89126582341",85);
+        return staffs;
     }
 
 }
