@@ -2,7 +2,7 @@ package com.company.lesson7;
 
 public class Cat {
     private final String name;
-    public int appetite;
+    private final int appetite;
     private boolean satiety=false;
 
 
@@ -11,7 +11,6 @@ public class Cat {
     public Cat(String name, int appetite) {
         this.name = name;
         this.appetite = appetite;
-
 
     }
 
