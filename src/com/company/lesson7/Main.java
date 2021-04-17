@@ -8,7 +8,7 @@ public class Main {
 
         Cat[] cats = getCats();
 
-        Plate plate=new Plate(1000);
+        Plate plate=new Plate(900);
 
         plate.info();
         feedAllTheCats(cats, plate, s, hunger);
@@ -40,10 +40,10 @@ public class Main {
     private static Cat[] getCats() {
         Cat[] cats=new Cat[5];
         cats[0] = new Cat("Baris",50);
-        cats[1] = new Cat("Maurizio",200);
-        cats[2] = new Cat("Tom",1000);
-        cats[3] = new Cat("Sam",60);
-        cats[4] = new Cat("Rodger",50);
+        cats[1] = new Cat("Maurizio",100);
+        cats[2] = new Cat("Tom",1150);
+        cats[3] = new Cat("Sam",20);
+        cats[4] = new Cat("Rodger",1000);
         return cats;
     }
 }
