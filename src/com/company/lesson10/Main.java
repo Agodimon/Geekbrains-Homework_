@@ -21,11 +21,13 @@ public class Main {
         set.add("Cat");
         Iterator<String> iter= set.iterator();
         while (iter.hasNext()){
-            String str= iter.next();
+            iter.next();
             count++;
+
         }
         System.out.println("List of unique words: "+set);
         System.out.println("Counting unique words = "+ count);
+
 
     }
 }
